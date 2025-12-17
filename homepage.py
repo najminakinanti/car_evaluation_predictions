@@ -2,10 +2,6 @@
 import streamlit as st
 
 def home(compact: bool = True, show_metrics: bool = True):
-    """
-    Render komponen beranda ringkas.
-    Returns: dict aksi, mis. {"action": "demo"} jika tombol ditekan.
-    """
     st.markdown(
         """
         <div style="line-height:1; margin-bottom:6px">
@@ -19,8 +15,6 @@ def home(compact: bool = True, show_metrics: bool = True):
         """,
         unsafe_allow_html=True,
     )
-    # st.title("BUY OR BYE?")
-    # st.header("Penilaian Cerdas untuk Kelayakan Mobil")
     st.markdown(
         "Menentukan apakah sebuah mobil layak dibeli kini jauh lebih mudah. Buy or Bye menggunakan model klasifikasi untuk menilai kelayakan mobil "
         "berdasarkan berbagai fitur penting seperti buying price, maintenance cost, jumlah pintu, kapasitas penumpang, ukuran bagasi, hingga "
@@ -34,14 +28,5 @@ def home(compact: bool = True, show_metrics: bool = True):
         "Hasil ini membantu Anda mendapatkan gambaran cepat, jelas, dan meyakinkan untuk menentukan pilihan terbaik.\n\n"
         "**💡Isi data mobil Anda → Dapatkan analisis otomatis → Putuskan buy atau bye dalam hitungan detik**"
     )
-
-    st.write("")  # spacing
-    st.caption("Aplikasi ini bersifat simulasi. Data Anda tidak akan disimpan tanpa izin.")
-    # CTA
-    if st.button("Coba Demo", key="home_demo"):
-        return {"action": "demo"}
-
-    # spare link / footer
-    st.markdown("---")
-    st.markdown("<small>Butuh bantuan? Lihat **FAQ** atau klik **Hubungi**.</small>", unsafe_allow_html=True)
+    
     return {"action": None}
